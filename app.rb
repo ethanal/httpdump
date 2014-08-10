@@ -49,7 +49,7 @@ def post_put_patch_delete(request)
     json: json,
     data: body
   })
-  JSON.pretty_generate(resp)
+  JSON.pretty_generate(resp) + "\n"
 end
 
 
@@ -57,7 +57,7 @@ get %r{/.*} do
   content_type :json
   resp = base_resp(request)
 
-  JSON.pretty_generate(resp)
+  JSON.pretty_generate(resp) + "\n"
 end
 
 post %r{/.*} do
